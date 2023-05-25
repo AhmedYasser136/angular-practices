@@ -1,0 +1,28 @@
+<div class="container">
+    <form #userForm="ngForm" novalidate (ngSubmit)="onSumit()">
+        <!-- {{userForm.value|json}}
+        <br>-->
+        {{userModel|json}}
+        <div>
+            <label>user</label>
+            <input type="text" name="txtName" [class.is-invalid]="name.invalid && name.touched" required
+                [(ngModel)]="userModel.name" #name="ngModel" class="form-control">
+        </div>
+        <div>
+            <label>email</label>
+            <input type="email" name="txtemail" [(ngModel)]="userModel.email" #email="ngModel" class="form-control">
+        </div>
+        <div>
+            <label>phone</label>
+            <input type="tel" name="txtphone" [(ngModel)]="userModel.phone" #phone="ngModel" class="form-control">
+        </div>
+
+        <div>
+            <select name="txttopic" [(ngModel)]="userModel.topic" #topic="ngModel" class="custom-select">
+                <option>iam interset</option>
+                <option *ngFor="let topic of topics">{{topic}}</option>
+            </select>
+        </div>
+        <input type="submit" [disabled]="userForm.form.invalid">
+    </form>
+</div>

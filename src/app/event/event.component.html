@@ -1,0 +1,38 @@
+<!-- <p>event works!</p>
+<input type="button" value="click me" (click)="showMessage()"> 
+
+
+{{message}} -->
+
+<p>event works!</p>
+<!-- نفس اللي فوق  -->
+
+<input type="button" value="click me" (click)="showMessage($event)">{{message}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+
+<input type="text" #txtInput > {{txtInput.value}}
+
+<button (click)="printMessage(txtInput.value)">show meesage</button>

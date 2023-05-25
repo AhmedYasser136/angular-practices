@@ -1,0 +1,26 @@
+<!-- 
+<h2 *ngIf="true"> hello iti</h2>  static
+
+<h2 *ngIf="displayName">loooool</h2>  
+
+
+-->
+
+<h2 *ngIf="displayName; else elseBlock">hello ahmed</h2>
+
+<ng-template #elseBlock>
+    <h2>hello lol</h2>
+</ng-template>
+
+<!-- <div *ngIf="displayName then thenBlock else elseBlock"></div>
+
+<ng-template #thenBlock>
+    <h2>hello ahmed</h2>
+</ng-template>
+
+
+<ng-template #elseBlock>
+    <h2>
+        hello guest
+    </h2>
+</ng-template> -->
